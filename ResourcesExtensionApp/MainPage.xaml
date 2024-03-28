@@ -2,14 +2,23 @@
 	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	  xmlns:local="using:ResourcesExtensionApp"
-	  xmlns:utu="using:Uno.Toolkit.UI"
-	  xmlns:um="using:Uno.Material"
 	  Background="{ThemeResource BackgroundBrush}">
-	<StackPanel utu:SafeArea.Insets="VisibleBounds"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center">
-		<TextBlock AutomationProperties.AutomationId="HelloTextBlock"
-				   Text="Hello Uno Platform"
-				   HorizontalAlignment="Center" />
+	<StackPanel HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Spacing="20">
+		<ToggleSwitch x:Name="ThemeToggle" HorizontalAlignment="Center">
+			<ToggleSwitch.OffContent>
+				<PathIcon Data="{StaticResource MoonIcon}" />
+			</ToggleSwitch.OffContent>
+			<ToggleSwitch.OnContent>
+				<PathIcon Data="{StaticResource SunIcon}" />
+			</ToggleSwitch.OnContent>
+		</ToggleSwitch>
+		<Button Style="{StaticResource FilledButtonStyle}"
+				Width="200"
+				Content="FilledButtonStyle" />
+		<Button Style="{StaticResource MyCustomButtonStyle}"
+				Width="200"
+				Content="MyCustomButtonStyle" />
 	</StackPanel>
 </Page>
