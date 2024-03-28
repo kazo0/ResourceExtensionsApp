@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"ResourcesExtensionApp.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"ResourcesExtensionApp.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}
